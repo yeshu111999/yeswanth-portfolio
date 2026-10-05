@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Yeswanth Ravipati - Full Stack Developer</title>
+<style>
+  @font-face { font-family: 'Carlito'; src: url('fonts/Carlito-Regular.ttf'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Carlito'; src: url('fonts/Carlito-Bold.ttf'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Carlito'; src: url('fonts/Carlito-Italic.ttf'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Carlito'; src: url('fonts/Carlito-BoldItalic.ttf'); font-weight: 700; font-style: italic; }
+
+  :root {
+    --ink: #1f1b16;      /* charcoal: name, body */
+    --accent: #8c6b4a;   /* bronze: headings, companies, rules */
+    --fill: #f3eadb;     /* champagne: skills label column */
+    --grid: #d9cfc0;     /* table borders */
+  }
+  @page { size: Letter; margin: 0.5in 0.95in 0.55in 0.95in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Carlito', Calibri, sans-serif; font-size: 10pt; line-height: 1.2; color: var(--ink); }
+
+  header { text-align: center; }
+  h1 { margin: 0; font-size: 20pt; font-weight: 700; letter-spacing: 0.3pt; color: var(--ink); }
+  .headline { margin-top: 2pt; font-size: 11pt; font-weight: 700; }
+  .contact { margin-top: 2pt; font-size: 9.5pt; white-space: nowrap; }
+  .sep { padding: 0 4pt; }
+
+  h2 {
+    margin: 12pt 0 5pt; padding-bottom: 2pt; font-size: 11.5pt; font-weight: 700; letter-spacing: 0.2pt;
+    color: var(--accent); border-bottom: 1.2pt solid var(--accent);
+  }
+  p { margin: 0; text-align: justify; }
+
+  .job { margin-top: 7pt; }
+  .job:first-of-type { margin-top: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; break-after: avoid; }
+  .company { font-size: 11pt; font-weight: 700; color: var(--accent); }
+  .dates { font-weight: 700; }
+  .role { font-weight: 700; font-style: italic; break-after: avoid; }
+  ul { margin: 2pt 0 1pt; padding-left: 20pt; }
+  li { margin: 0 0 1.6pt; padding-left: 2pt; break-inside: avoid; }
+  .env { margin-top: 1pt; font-size: 9.5pt; }
+  .env b { font-style: normal; }
+  .env i { font-style: italic; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; break-inside: auto; }
+  td { border: 0.75pt solid var(--grid); padding: 2.5pt 6pt; vertical-align: top; }
+  tr { break-inside: avoid; }
+  td.k { width: 27%; background: var(--fill); font-weight: 700; }
+
+  .edu { display: flex; justify-content: space-between; }
+  .edu b { font-weight: 700; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>YESWANTH RAVIPATI</h1>
+    <div class="headline">Full Stack Developer<span class="sep">|</span>React<span class="sep">|</span>Next.js<span class="sep">|</span>TypeScript<span class="sep">|</span>Node.js<span class="sep">|</span>Python</div>
+    <div class="contact">806-283-6826<span class="sep">|</span>yeswanthravipati00@gmail.com<span class="sep">|</span>linkedin.com/in/yeswanth-ravipati-ab752b1a0<span class="sep">|</span>yeswanth-ravipati.vercel.app</div>
+  </header>
+
+  <h2>PROFESSIONAL SUMMARY</h2>
+  <p>Full Stack Developer with 4 years of experience shipping production web, mobile, and AI products in Next.js, React, and TypeScript, with backends in Node.js, Python/FastAPI, Rust, and PHP. Specialized in payments and commerce: HMAC-signed hosted-checkout integrations, idempotent Stripe webhooks, and race-safe order reconciliation on PostgreSQL. Built a multi-tenant voice AI calling platform, AI agents, a multi-model LLM platform serving 100+ users, the lusso.ai marketplace, and GE Appliances' delivery tracking system; led a team of 5+ contract developers. M.S. in Computer Science, Texas Tech University.</p>
+
+  <h2>PROFESSIONAL EXPERIENCE</h2>
+
+  <div class="job">
+    <div class="job-head"><span class="company">Lusso Labs Inc – Southlake, TX</span><span class="dates">April 2024 – Present</span></div>
+    <div class="role">Role: Full Stack Developer</div>
+    <ul>
+      <li>Architected a multi-tenant voice AI calling platform with a Next.js console and a Python/FastAPI + Pipecat voice service, isolating tenants with PostgreSQL Row-Level Security and Clerk organizations, and integrating Telnyx Call Control and media streaming behind swappable STT/LLM/TTS adapters.</li>
+      <li>Built AI agents for real-time voice calling, customer support and sales chat, marketing content generation, and operations workflow automation, using tool calling on the Claude API and OpenRouter.</li>
+      <li>Built and launched a multi-model LLM platform (Next.js, OpenRouter, Dify) serving 100+ users, with streaming responses, automatic provider fallback, per-user usage quotas, and Stripe subscription billing on a Prisma/Supabase data model.</li>
+      <li>Rebuilt a static e-commerce site into a production Next.js 16 / React 19 App Router store with 21 pages, a 5-table Neon Postgres schema (Drizzle, reversible migrations), and a full admin for products, orders, customers, and inventory.</li>
+      <li>Wrote a TypeScript client for a hosted-checkout payment protocol that previously shipped only as a PHP plugin, with HMAC-SHA256 request signing so card data never touches application servers (out of PCI scope).</li>
+      <li>Engineered webhook-independent order reconciliation that checks payment status from three sources plus a daily Vercel cron, using race-safe database transitions so emails send exactly once and stock from abandoned orders is released.</li>
+      <li>Built and shipped a WooCommerce payment gateway plugin (PHP) across 7 releases, with one-key activation, HMAC-signed requests, auto-enable on merchant approval, hourly order sync that works on shared hosting, classic and block checkout support, and in-dashboard self-updates.</li>
+      <li>Built a paid early-access funnel with Stripe Checkout, customer portal, and admin board, hardening payments with signature-verified idempotent webhooks, test-mode filtering, and separate production/preview databases after diagnosing a cross-environment payment incident.</li>
+      <li>Built and launched a healthcare booking platform (Next.js, Prisma, Neon, Twilio) with a multi-step booking wizard, city-based practitioner matching, 24-hour scheduling with tiered after-hours pricing, and itemized add-ons.</li>
+      <li>Automated appointment reminders and feedback requests over email and SMS with Vercel Cron and duplicate-send guards, and secured the staff admin with signed-cookie auth enforced by Edge middleware across pages and APIs.</li>
+      <li>Built a Trump Mobile affiliate platform end to end: a Next.js landing page, UTM-tracked enrollment funnels, conversion-focused CTAs, and analytics.</li>
+      <li>Led an investor and portfolio management platform (React 18, TypeScript, Redux Toolkit/RTK Query, AWS CloudFront) through two versions, directing 5+ contract developers and reviewing and merging 140+ pull requests across 620+ commits.</li>
+      <li>Shipped lusso.ai, an AI-powered creator marketplace with ~117 routes, including search, reviews, an AI chat assistant, a creator analytics portal, Stripe subscriptions, and a 12-platform social analytics hub with OAuth, deployed on AWS Amplify and S3.</li>
+      <li>Built a cross-platform fitness app (React Native, Expo, TypeScript, Zustand) with personalized training plans and macro targets, plus meal-photo calorie scanning via the Claude vision API returning structured JSON.</li>
+      <li>Built a Rust Solana trading dashboard (Axum, Tokio, solana-sdk) with an encrypted wallet vault (Argon2, AES-GCM, memory zeroization), multi-wallet bots, risk limits, and live Jupiter swaps; also built a Solana token launchpad (Raydium, Metaplex) and a cross-exchange arbitrage engine (Binance, Alpaca, Jupiter).</li>
+    </ul>
+    <div class="env"><b>Environment:</b> <i>Next.js, React 19, TypeScript, Node.js/Express, Python/FastAPI, Pipecat, Rust (Axum, Tokio), PHP/WooCommerce, PostgreSQL (Neon, Supabase), Prisma, Drizzle, Stripe, Clerk, NextAuth, Twilio, Resend, Telnyx, OpenRouter, Claude API, React Native/Expo, Redux Toolkit, Solana, Vercel, AWS, Docker, GitHub Actions</i></div>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="company">Dinewise Inc – Farmers Branch, TX</span><span class="dates">May 2023 – March 2024</span></div>
+    <div class="role">Role: Full Stack Developer</div>
+    <ul>
+      <li>Built dynamic, responsive React.js interfaces with Redux, integrating REST APIs for real-time inventory and order data visualization across desktop and mobile.</li>
+      <li>Built a retrieval-augmented (RAG) question-answering interface (Svelte, TypeScript) with semantic search over document corpora and streamed model responses.</li>
+      <li>Built order and inventory management views in Vue 3 with the Composition API, Vue Router for client-side routing, and Pinia stores for shared state.</li>
+      <li>Resolved critical production performance bottlenecks through profiling and query optimization (composite indexes, N+1 elimination), reducing average API response time from 1.2s to under 350ms.</li>
+    </ul>
+    <div class="env"><b>Environment:</b> <i>React, Redux, Vue 3, Vue Router, Pinia, Svelte, TypeScript, REST APIs, SQL, Git, Agile/Scrum</i></div>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="company">Cognizant Solutions – Chennai, India</span><span class="dates">August 2021 – October 2021</span></div>
+    <div class="role">Role: Program Analyst Trainee</div>
+    <ul>
+      <li>Automated enterprise client workflows in Microsoft Dynamics 365 CRM, building custom workflows and JavaScript form logic that eliminated manual data entry and enforced business validation rules at the point of capture.</li>
+      <li>Safeguarded data integrity in a multi-source ETL migration, designing test scenarios and SQL reconciliation queries that validated field-level mappings and caught data mismatches before production release.</li>
+    </ul>
+    <div class="env"><b>Environment:</b> <i>Microsoft Dynamics 365 CRM, JavaScript, SQL, ETL testing</i></div>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="company">GE Appliances – Hyderabad, India</span><span class="dates">January 2021 – June 2021</span></div>
+    <div class="role">Role: E-Commerce Developer (Internship)</div>
+    <ul>
+      <li>Engineered GE Appliances' delivery tracking platform end to end, shipping two production applications that give consumers, dealers, and builders real-time visibility into appliance deliveries.</li>
+      <li>Architected a multi-criteria order lookup engine resolving deliveries by PO number, order number, account number, or phone number, secured through delivery-ZIP verification to protect customer order data.</li>
+      <li>Designed a frictionless, mobile-first consumer tracking flow requiring only phone number and ZIP code, with real-time input formatting and inline validation that made delivery lookup fast for homeowners.</li>
+      <li>Built Java/Spring Boot REST APIs unifying order, fulfillment, and last-mile logistics data into a single tracking view with live status, scheduled delivery windows, and driver location.</li>
+      <li>Delivered responsive JavaScript/Bootstrap frontends meeting accessibility, CCPA, and cookie-consent requirements, with 15-day upcoming and 180-day history views for high-volume B2B accounts.</li>
+      <li>Shipped e-commerce features across the customer order journey, deployed services on Heroku, and automated operational reporting in Python against the C360 customer database.</li>
+    </ul>
+    <div class="env"><b>Environment:</b> <i>JavaScript, Bootstrap, Java, Spring Boot, REST APIs, Heroku, Python, SQL</i></div>
+  </div>
+
+  <h2>TECHNICAL SKILLS</h2>
+  <table>
+    <tr><td class="k">Languages</td><td>TypeScript, JavaScript (ES6+), Python, Rust, PHP, Java, SQL, HTML5/CSS3</td></tr>
+    <tr><td class="k">Frontend &amp; Mobile</td><td>React 19, Next.js 16 (App Router), Vue 3 (Nuxt, Pinia), React Native/Expo, Redux Toolkit/RTK Query, React Query, Zustand, TailwindCSS, shadcn/ui, Accessibility</td></tr>
+    <tr><td class="k">Backend &amp; Data</td><td>Node.js/Express, Python/FastAPI, Rust (Axum, Tokio), PostgreSQL (Neon, Supabase, Row-Level Security), Prisma, Drizzle, REST, WebSockets, GraphQL</td></tr>
+    <tr><td class="k">Payments &amp; Commerce</td><td>Stripe (Checkout, subscriptions, webhooks), HMAC-signed hosted checkout, WooCommerce plugin development, order reconciliation, PCI-scope reduction</td></tr>
+    <tr><td class="k">AI &amp; Voice</td><td>LLM Integration (Claude API, OpenRouter, Dify), AI agents with tool calling, Claude vision, streaming responses, Pipecat, Telnyx, real-time voice agents (STT/LLM/TTS)</td></tr>
+    <tr><td class="k">Auth, Messaging &amp; Security</td><td>Clerk, NextAuth, JWT, Edge middleware, Twilio, Resend, rate limiting, CSP, consent-gated GA4/Meta Pixel</td></tr>
+    <tr><td class="k">Web3</td><td>Solana, solana-sdk, Jupiter, Raydium, Metaplex, Binance/Alpaca APIs</td></tr>
+    <tr><td class="k">Cloud &amp; Tooling</td><td>Vercel (Cron, Edge), AWS (Amplify, S3, CloudFront, Elastic Beanstalk), Docker, GitHub Actions, Jest, React Testing Library, PyTest, Puppeteer, PDF/PPTX automation</td></tr>
+    <tr><td class="k">Practices</td><td>Agile/Scrum, code review, CI/CD, team leadership, idempotent and race-safe system design</td></tr>
+  </table>
+
+  <h2>EDUCATION</h2>
+  <div class="edu"><b>Master of Science in Computer Science</b><span>Texas Tech University, Lubbock, TX</span></div>
+  <div class="edu"><b>Bachelor of Science in Computer Science and Engineering</b><span>SASTRA Deemed University, India</span></div>
+</body>
+</html>

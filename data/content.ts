@@ -330,7 +330,7 @@ export const work = {
       title: 'AI agents',
       wide: true,
       description:
-        'Agents for real-time voice calling, customer support and sales chat, marketing content, and ops workflow automation, with tool use and human handoff.',
+        'Agents for real-time voice calling, customer support and sales chat, marketing content, and ops workflow automation, using tool calling on the Claude API and OpenRouter.',
       tags: ['Claude API', 'OpenRouter', 'Pipecat', 'Telnyx', 'Tool use'],
       stat: { value: '4 agent types', label: 'voice · chat · marketing · ops' },
       visual: 'agents',
